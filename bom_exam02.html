@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+	<script type="text/javascript">
+		function idcheck() {
+			resultval = myform.input.value
+			result = document.getElementById("result")
+			a=""
+			if(resultval.length<4){
+				a = "4글자 이상의 글자를 입력하세욘"
+			}else{
+				if(resultval=="java"){
+					a= "이미 사용중인 아이디입니다."
+				}else{
+					a = "사용 가능한 아이디입니다."
+				} 
+			}
+			result.innerHTML = a;
+		}
+	</script>
+
+</head>
+<body>
+	
+	<form name="myform">
+		<h1>티몬회원가입</h1>
+		<h2>필수항목</h2>
+		아이디 : <input type="text" name="input" onkeyup="idcheck()">
+		<div id="result" style="font-size: 14pt;font-weight: bold; color: red;"></div>
+	</form>
+	
+</body>
+</html>
